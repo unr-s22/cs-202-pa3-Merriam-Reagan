@@ -4,18 +4,35 @@
 #include<iostream>
 #include <string>
 
+using namespace std;
+
 class Money {
 private:
 	int dollars;
 	int cents;
 public:
-	//constructor that takes dollars and cents
 	Money(int dollars, int cents){}
-	//default constructor
 	Money(){}
-	//overload of <,>,<=,>=,!=,==
-	
-	//overload to add/subtract money in account
+
+	Money operator < () {
+		Money < Account
+	}
+	Money operator > () {
+		Money > Account
+	}
+	Money operator <= () {
+		Money <= Account
+	}
+	Money operator >= () {
+		Money >= Account
+	}
+	Money operator != () {
+		Money != Account
+	}
+	Money operator == () {
+		Money == Account
+	}
+
 	Money operator- () {
 		dollars = -dollars;
 		cents = -cents;
@@ -27,15 +44,11 @@ public:
 		return Money(dollars,cents);
 	}
 
-	//overload of string operator
-	friend std::ostream &operator<<(std::ostream &out, const Money &Money){
+	friend std::ostream &operator<<(std::ostream &out, Money &m){
 		Money m(100,10);
-		std::cout << m << std::endl;
+		cout << m << endl;
 		return m;
-	} 
-
-		//std::cout << m << std::endl;
-	
+	} 	
 
 };
 #endif
