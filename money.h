@@ -14,24 +14,12 @@ public:
 	Money(int dollars, int cents){}
 	Money(){}
 
-	Money operator < () {
-		Money < Account
-	}
-	Money operator > () {
-		Money > Account
-	}
-	Money operator <= () {
-		Money <= Account
-	}
-	Money operator >= () {
-		Money >= Account
-	}
-	Money operator != () {
-		Money != Account
-	}
-	Money operator == () {
-		Money == Account
-	}
+	bool operator < (const Money& m);	
+	bool operator >(const Money& m);
+	bool operator <= (const Money& m);
+	bool operator >= (const Money& m);
+	bool operator != (const Money& m);
+	bool operator == (const Money& m);
 
 	Money operator- () {
 		dollars = -dollars;
@@ -44,11 +32,7 @@ public:
 		return Money(dollars,cents);
 	}
 
-	friend std::ostream &operator<<(std::ostream &out, Money &m){
-		Money m(100,10);
-		cout << m << endl;
-		return m;
-	} 	
+	friend std::ostream& operator<<(std::ostream& out, const Money &m);	
 
 };
 #endif

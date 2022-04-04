@@ -1,5 +1,5 @@
-#include"Money.h"
-#include "Account.h"
+#include"money.h"
+#include "account.h"
 
 using namespace std;
 
